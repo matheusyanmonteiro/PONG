@@ -1,4 +1,5 @@
 import randomNumberBetween from "../components/RandomNumberBetween.js";
+import isCollision from "../components/Collision.js";
 
 const INITIAL_VELOCITY = .025;
 const VELOCITY_INCREASE =.00001;
@@ -59,9 +60,3 @@ export default class Ball {
   }
 }
 
-function isCollision(rect1, rect2) {
-  return rect1.left <= rect2.right 
-  && rect1.right >= rect2.left 
-  && rect1.top <= rect2.bottom 
-  && rect1 .bottom >= rect2.top;
-}
